@@ -10,8 +10,15 @@
   "license": "ISC",
   "dependencies": {
     "EventEmitter": "^1.0.0",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.4.1",
+    "express": "^4.17.1",
     "inquirer": "^7.0.2",
     "jsonfile": "^5.0.0",
-    "rxjs": "^6.5.4"
+    "method-override": "^3.0.0",
+    "path": "^0.12.7",
+    "pug": "^2.0.4",
+    "rxjs": "^6.5.4",
+    "sqlite": "^3.0.3"
   }
 }

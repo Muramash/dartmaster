@@ -2,10 +2,10 @@
 const inquirer = require('inquirer')
 
 // Import class
-const Play = require('./play').play
+const Play = require('./../play').play
 
 class Cricket extends Play {
-    questions = require('../questions')
+    questions = require('../../../questions')
     scoreBegin = [
         [15, 0],
         [16, 0],

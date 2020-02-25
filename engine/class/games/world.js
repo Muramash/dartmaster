@@ -2,10 +2,10 @@
 const inquirer = require('inquirer')
 
 // Import class
-const Play = require('./play').play
+const Play = require('./../play').play
 
 class world extends Play {
-    questions = require('../questions')
+    questions = require('../../../questions')
     scoreBegin = 0
     scoreWin = 20
 
