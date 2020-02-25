@@ -1,0 +1,33 @@
+html(charset='UTF-8')
+    head
+        title Game
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin="anonymous")
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css", integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r", crossorigin="anonymous")
+        script(src="https://code.jquery.com/jquery-2.2.4.js", integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=", crossorigin="anonymous")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js", integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", crossorigin="anonymous")
+
+    body
+        .container
+            .jumbotron
+                h1.text-center Partie n° #{response.id}
+            table.table.table-striped
+                thead
+                    tr
+                        th ID
+                        th Mode
+                        th Name
+                        th Current Player Id
+                        th Status
+                        th Created at
+                tbody
+                    tr
+                        td #{response.id}
+                        td #{response.gameMode}
+                        td #{response.gameName}
+                        td #{response.actualPlayerId}
+                        td #{response.gameStatus}
+                        td #{response.created}
+                        td     
+                            form(method='POST' action='/games/' + response.id + '?_method=DELETE')
+                                button.btn.btn-danger(type='submit') Supprimer
+                        tr
